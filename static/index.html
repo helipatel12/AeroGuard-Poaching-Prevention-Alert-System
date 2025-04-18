@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>AeroGuard Wildlife Anomaly Detection</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="css/aos.css" rel="stylesheet">
+  <link href="css/glightbox.min.css" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/icons/" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="img/logo.png" alt=""> -->
+        <h1 class="sitename">AeroGuard</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#Project">Project</a></li>
+          <li><a href="#Result">Result</a></li>
+          <li><a href="#Our Team">Our Team</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="index.html#about">Live Video</a>
+      <!-- <button class="btn-getstarted" onclick="startLiveVideo()">Live Video</button> -->
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+
+              <h1 class="mb-4">
+                <span class="accent-text">AeroGuard</span><br>
+                Wildlife with <br>
+                Anomaly Detection
+              </h1>
+
+              <p class="mb-4 mb-md-5">
+                AI-powered system for detecting wildlife anomalies and preventing poaching activities.
+              </p>
+
+              <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Live Video</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+              <img src="img/illustration-1.webp" alt="Hero Image" class="img-fluid">
+
+              <!-- <div class="customers-badge">
+                <div class="customer-avatars">
+                  <img src="img/avatar-1.webp" alt="Customer 1" class="avatar">
+                  <img src="img/avatar-2.webp" alt="Customer 2" class="avatar">
+                  <img src="img/avatar-3.webp" alt="Customer 3" class="avatar">
+                  <img src="img/avatar-4.webp" alt="Customer 4" class="avatar">
+                  <img src="img/avatar-5.webp" alt="Customer 5" class="avatar">
+                  <span class="avatar more">12+</span>
+                </div>
+                <p class="mb-0 mt-2">12,000+ lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+              </div> -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-trophy"></i>
+              </div>
+              <div class="stat-content">
+                <h4>42,100</h4>
+                <p class="mb-0">Endangered Species</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <div class="stat-content">
+                <h4>1,549</h4>
+                <p class="mb-0">Poachers Arrested</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-graph-up"></i>
+              </div>
+              <div class="stat-content">
+                <h4>23,000,000,000</h4>
+                <p class="mb-0">Dollar Illegal Trade/year</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-award"></i>
+              </div>
+              <div class="stat-content">
+                <h4>3,000</h4>
+                <p class="mb-0">Save WildLife Species</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 align-items-center justify-content-between">
+
+          <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+            <span class="about-meta">ABOUT OUR PROJECT</span>
+            <h2 class="about-title">How It Works</h2>
+            <p class="about-description">AeroGuard is an system designed to protect wildlife. 
+              It helps spot unusual activities in forests and alerts authorities in real time to stop poaching and other threats. 
+              With smart tracking and monitoring, AeroGuard makes it easier to safeguard endangered animals and support conservation efforts.</p>
+              
+            <div class="row feature-list-wrapper">
+              <div class="col-md-6">
+                <ul class="feature-list">          
+                  <li><i class="bi bi-check-circle-fill"></i> Monitor wildlife areas from above.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Advanced image recognition to detect poaching threats.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Notify authorities.</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle-fill"></i> Provide locations for quick response.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Improve wildlife protection strategies.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Detect threats even in low-light conditions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="image-wrapper">
+              <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                <img src="img/about-5.webp" alt="Business Meeting" class="img-fluid main-image rounded-4">
+                <img src="img/about-2.webp" alt="Team Discussion" class="img-fluid small-image rounded-4">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Features</h2>
+        <p>Our AeroGuard system is equipped with advanced AI technology to ensure efficient and effective wildlife anomaly detection. 
+          <br>
+              Below are the key features that make our system unique:<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="d-flex justify-content-center">
+
+          <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                <h4>Live Detect</h4>
+              </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                <h4>Alert</h4>
+              </a><!-- End tab nav item -->
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                <h4>Location</h4>
+              </a>
+            </li><!-- End tab nav item -->
+
+          </ul>
+
+        </div>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="features-tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>AI-powered real-time anomaly detection.</h3>  
+                <p class="fst-italic">
+                  This feature enables the system to monitor wildlife areas in real-time, identifying threats such as poachers or distressed animals. 
+                  With live video processing, the system can immediately detect suspicious movements and unauthorized human presence.
+                </p>                          
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Identifies unusual movement patterns in wildlife reserves.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Uses YOLO and Pytorch to detect unauthorized human presence.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Processes live video feeds from drones for immediate analysis.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="img/features-illustration-1.webp" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+          <div class="tab-pane fade" id="features-tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Automated emergency notifications upon threat detection.</h3>
+                <p class="fst-italic">
+                  Whenever a potential threat is detected, AeroGuard sends alerts to the Base Station. 
+                  These alerts contain critical details, including Detected Class, Date & Time and Location Coordinates, ensuring rapid response.
+                </p> 
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Notifies wildlife authorities of suspicious activities.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Sends alerts via SMS.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Ensures rapid response to potential poaching incidents.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="img/features-illustration-2.webp" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+          <div class="tab-pane fade" id="features-tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Integrated location tracking for precise monitoring and rapid response.</h3>
+                <p class="fst-italic">
+                  Location tracking allows authorities to locate threats. 
+                  This feature is essential for tracking Fire, Vehicles, identifying poaching hotspots, and guiding security teams to the location of incidents.
+                </p> 
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Provides real-time location tracking of detected threats.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Guides security teams to coordinates for intervention.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Logs location data for future analysis and pattern recognition.</span></li>
+                </ul>                
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="img/features-illustration-3.webp" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>AeroGuard offers a services to enhance wildlife conservation and security in protected areas.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+            <div class="row gy-5 gx-4">
+                <!-- First Service -->
+                <div class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card d-flex">
+                        <div class="icon flex-shrink-0 icon-blue">
+                            <i class="bi bi-camera-video"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-3">Stealth Surveillance</h5>
+                            <span>Efficient monitoring system that operates covertly to safeguard wildlife habitats.</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Second Service -->
+                <div class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-card d-flex">
+                        <div class="icon flex-shrink-0 icon-blue">
+                            <i class="bi bi-shield"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-3">Firefighter AI</h5>
+                            <span>Cutting-edge technology that detects and responds to wildfires in real-time, minimizing environmental damage.</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Third Service -->
+                <div class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-card d-flex">
+                        <div class="icon flex-shrink-0 icon-blue">
+                            <i class="bi bi-poaching"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-3">Poacher Buster</h5>
+                            <span>Dedicated AI solution designed to capture illegal poaching activities and protect endangered species.</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Fifth Service -->
+                <div class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card d-flex">
+                        <div class="icon flex-shrink-0 icon-blue">
+                            <i class="bi bi-safari"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-3">Wildlife Watcher</h5>
+                            <span>AI-powered observer that monitors and studies the behavior of diverse wildlife species.</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Seventh Service -->
+                <div class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-card d-flex">
+                        <div class="icon flex-shrink-0 icon-blue">
+                            <i class="bi bi-detection"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-3">Anomaly Alert</h5>
+                            <span>Alerts for unusual and suspicious activities, enhancing wildlife conservation efforts.</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Eighth Service -->
+                <div class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-card d-flex">
+                        <div class="icon flex-shrink-0 icon-blue">
+                            <i class="bi bi-alert"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-3">Vehicle Vigilant</h5>
+                            <span>Identifies and alerts authorities to vehicles in protected areas, bolstering security.</span>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+<!--     
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-activity"></i>
+              </div>
+              <div>
+                <h3>Stealth Surveillance</h3>
+                <p>Efficient monitoring system that operates covertly to safeguard wildlife habitats.</p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-diagram-3"></i>
+              </div>
+              <div>
+                <h3>Firefighter AI</h3>
+                <p>Cutting-edge technology that detects and responds to wildfires in real-time, minimizing environmental damage.</p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-easel"></i>
+              </div>
+              <div>
+                <h3>Poacher Buster</h3>
+                <p>Dedicated AI solution designed to capture illegal poaching activities and protect endangered species.</p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-clipboard-data"></i>
+              </div>
+              <div>
+                <h3>Night Guardian</h3>
+                <p>Vigilant nighttime surveillance system using thermal imaging to safeguard wildlife during the dark hours.</p>
+                <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div> 
+-->
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Project Section -->
+    <section id="Project" class="pricing section light-background">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Project</h2>
+            <p>AeroGuard is a system designed for wildlife monitoring, poacher detection, and automated surveillance using video analysis, with map visualization and result table output.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="container my-4 d-flex flex-column mb-3">
+                        <h1 class="display-5 mb-4"><span class="text-primary">Wildlife </span>Anomaly Detection Using
+                            YOLO</h1>
+                            <form class="d-flex flex-column my-3" id="upload-form" action="/upload/" method="post"
+                            enctype="multipart/form-data">
+                            <span class="my-3" style="display: flex;justify-content: space-between;">
+                            <h6 for="inputGroupFile02 my-1"># Upload Video (only mp4)</h6>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="getAlert">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Alert & Notification</label>
+                            </div></span>
+                            <div class="input-group mb-3">
+                                <input type="file" class="form-control" id="inputGroupFile02" name="video" required>
+                            </div>
+                            <select class="form-select mb-4" aria-label="Default select example" name="selected_class" required>
+                                <option selected>Select the Video shot type</option>
+                                <option value="Daylight">Day-light</option>
+                                <option value="Thermal">Thermal-Imaging</option>
+                            </select>
+                            <input class="btn btn-primary align-self-center" type="submit" value="Upload" id="upload-btn">
+                        </form>
+                        <div class="my-5 d-flex flex-column align-items-center">
+                            <div class="lds-dual-ring" id="loader"></div>
+                            <p id="load-text">Detetcing Anomalies...</p>
+                        </div>
+                        <!-- <div class="my-5 d-flex flex-column align-items-center">
+                          <div class="custom-loader" id="loader" style="display: none;"></div>
+                          <p id="load-text" style="display: none;">Detecting Anomalies...</p>
+                        </div> -->
+                      
+                    </div>
+                    <div id="result-window">
+                        <div class="col-lg-6" style="width: 100%;">
+                            <!-- class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5 justify-content-around" 
+                                class="call-to-action-2 section  dark-background"-->
+                            <div class="call-to-action-2 section  dark-background">
+                                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="col-xl-5 align-items-center">
+                                        <h3>Visualization of Predicted Result</h3>
+                                    </div>
+                                </div>
+                                    <!-- <h3 class="display-5 text-white mb-0">Visualization of Predicted Result</h3> -->
+                            </div>
+                        </div>
+                        <div class="container-fluid my-3">
+                            <div class="row d-flex justify-content-around">
+                                <div class="col-lg-6 give_width">
+                                    <video id="uploaded-video" style="width: 100%;" controls type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="col-lg-6 give_width">
+                                    <video id="inference-video" style="width: 100%;" controls type="video/webm" crossorigin="anonymous">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid my-3">
+                            <div class="d-flex justify-content-around">
+                                <div class="give_width">
+                                    <h5 class="display-6 mt-4">Reference <span class="text-primary">Map</span></h3>
+                                    <div id="map"></div>
+                                    <input type="range" class="form-range" id="frame-slider" min="0" max="100" step="1" value="0" style="width: 46.875vw;">
+                                    <label for="customRange1" class="form-label">Slide to See Other Frames</label>
+                                </div>
+                                <div class="result_table ms-1">
+                                    <h5 class="display-6 mt-4">Result <span class="text-primary">Table</span></h3>
+                                    <table class="table" id="detections-table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Index</th>
+                                            <th scope="col">Frame No.</th>
+                                            <th scope="col">Detected Object</th>
+                                            <th scope="col" style="width: 110px;">Confidence</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody class="overflow-y" style="max-height: 350px;"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Our Team Section -->
+    <section id="Our Team" class="Our Team section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Team</h2>
+        <p>Meet the dedicated team behind AeroGuard, working tirelessly to develop cutting-edge AI solutions for wildlife conservation.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row g-5">
+
+          <!-- First Testimonial -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-item">
+              <img src="img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Khushi Gajjar</h3>
+              <h4>21124022</h4>
+            </div>
+          </div><!-- End Testimonial Item -->
+
+          <!-- Second Testimonial -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-item">
+              <img src="img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Heli Patel</h3>
+              <h4>21124015</h4>
+            </div>
+          </div><!-- End Testimonial Item -->
+
+          <!-- Third Testimonial -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-item">
+              <img src="img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Aarya Mehta</h3>
+              <h4>21124001</h4>
+            </div>
+          </div><!-- End Testimonial Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Our Team Section -->
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/glightbox.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

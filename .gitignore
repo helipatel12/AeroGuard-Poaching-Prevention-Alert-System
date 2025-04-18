@@ -12,3 +12,7 @@ env/
 
 # Logs
 *.log
+
+# Videos
+*.mp4
+*.webm

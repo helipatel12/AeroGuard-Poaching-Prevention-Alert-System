@@ -58,7 +58,7 @@ The system detects humans, animals, and vehicles from surveillance imagery and s
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 - Uses aerial thermal infrared (TIR) and RGB image datasets  
 - Includes both **real** and **synthetic** data  

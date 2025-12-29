@@ -34,8 +34,10 @@ def get_phone_location(phone_ip):
         response = requests.get(url, timeout=3)
         data = response.json()
 
-        latitude = data['gps']['latitude']
-        longitude = data['gps']['longitude']
+        # latitude = data['gps']['latitude']
+        # longitude = data['gps']['longitude']
+        latitude = print("Unknown")
+        longitude = print("Unknown")
 
         return latitude, longitude
     except Exception as e:
@@ -137,5 +139,5 @@ def predict_live(camera_source, phone_ip, video_class="Daylight"):
 
 # Set IP Webcam URL
 # heli
-phone_ip = "192.168.29.224"
+phone_ip = "10.98.118.75"
 predict_live(f"http://{phone_ip}:8080/video", phone_ip)
